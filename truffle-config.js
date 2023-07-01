@@ -58,10 +58,10 @@ module.exports = {
     linea_goerli: {
       provider: () => new HDWalletProvider(mnemonic, infuraURL),
       network_id: "59140", // Goerli network ID
-      gas: 10000000000, // gas limit for transactions
-      timeout: 120000, // 2 minutes
-      //gasPrice: 10000000000, // gas price for transactions 
-      websockets: true // enable websockets for the provider
+      gas: 1000000, // Rinkeby has a lower block limit than mainnet
+      confirmations: 2, // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
     },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
