@@ -55,6 +55,14 @@ module.exports = {
     // from: <address>,        // Account to send txs from (default: accounts[0])
     // websocket: true        // Enable EventEmitter interface for web3 (default: false)
     // },
+    linea_goerli: {
+      provider: () => new HDWalletProvider(mnemonic, infuraURL),
+      network_id: "59140", // Goerli network ID
+      gas: 10000000000, // gas limit for transactions
+      timeout: 120000, // 2 minutes
+      //gasPrice: 10000000000, // gas price for transactions 
+      websockets: true // enable websockets for the provider
+    },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     rinkeby: {

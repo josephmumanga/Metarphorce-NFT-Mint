@@ -6,9 +6,13 @@
   "author": "Anthony Albertorio <anthony.albertorio@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@infura/sdk": "^2.4.3",
     "@openzeppelin/contracts": "^4.6.0",
     "@truffle/hdwallet-provider": "^2.0.9",
-    "dotenv": "^16.0.1",
+    "dotenv": "^16.3.1",
     "ethers": "^5.0.0"
+  },
+  "devDependencies": {
+    "truffle-privatekey-provider": "^1.5.0"
   }
 }
