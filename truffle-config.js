@@ -20,7 +20,7 @@
 
 require("dotenv").config(); // allows usage of .env file to store secrets
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const infuraURL = `https://rinkeby.infura.io/v3/${process.env.INFURA_PROJECT_ID}`;
+const infuraURL = "https://linea-goerli.infura.io/v3/70315a41a1a645718cd128867aa42e7c";
 const mnemonic = process.env.MNEMONIC;
 
 module.exports = {
