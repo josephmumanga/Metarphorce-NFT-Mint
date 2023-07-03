@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "@infura/sdk": "^2.4.3",
-    "@openzeppelin/contracts": "^4.6.0",
+    "@openzeppelin/contracts": "^4.9.2",
     "@truffle/hdwallet-provider": "^2.0.9",
     "dotenv": "^16.3.1",
     "ethers": "^5.0.0"
