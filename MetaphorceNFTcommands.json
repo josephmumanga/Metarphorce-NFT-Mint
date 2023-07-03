@@ -1,0 +1,34 @@
+{
+    "schemaVersion": "2.2",
+    "description": "Metaphorce NFT Deployment",
+    "mainSteps": [
+      {
+        "action": "aws:runShellScript",
+        "name": "nvm_use_lts",
+        "inputs": {
+          "runCommand": [
+            "nvm use --lts"
+          ]
+        }
+      },
+      {
+        "action": "aws:runShellScript",
+        "name": "truffle_migrate",
+        "inputs": {
+          "runCommand": [
+            "truffle migrate --reset --network mumbai"
+          ]
+        }
+      },
+      {
+        "action": "aws:runShellScript",
+        "name": "mintNFT_script",
+        "inputs": {
+          "runCommand": [
+            "truffle exec scripts/mintNFT.js --network mumbai"
+          ]
+        }
+      }
+    ]
+  }
+  
