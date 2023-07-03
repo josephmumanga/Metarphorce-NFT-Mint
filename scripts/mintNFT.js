@@ -26,6 +26,7 @@ module.exports = async function (callback) {
     .on("transactionHash", (txhash) => {
       console.log(`Mining transaction ...`);
       console.log(`https://mumbai.polygonscan.com/tx/${txhash}`);
+      //console.log(`https://goerli.lineascan.build/tx/${txhash}`);
       //Examples
       //https://mumbai.polygonscan.com/tx/0xe021db7d1dfd874cea45ee377b0d69b6ced7e279a54b8f5b1a31420b55210037
       //https://goerli.etherscan.io/tx/0xe021db7d1dfd874cea45ee377b0d69b6ced7e279a54b8f5b1a31420b55210037

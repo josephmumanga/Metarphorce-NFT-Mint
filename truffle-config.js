@@ -21,6 +21,7 @@
 require("dotenv").config(); // allows usage of .env file to store secrets
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 const infuraURL = "https://polygon-mumbai.infura.io/v3/70315a41a1a645718cd128867aa42e7c";
+//const infuraURL = "https://linea-goerli.infura.io/v3/70315a41a1a645718cd128867aa42e7c";
 const mnemonic = process.env.MNEMONIC;
 
 module.exports = {
@@ -68,8 +69,8 @@ module.exports = {
     linea_goerli: {
       provider: () => new HDWalletProvider(mnemonic, infuraURL),
       network_id: "59140", // Goerli network ID
-      gas: 30000000, // Rinkeby has a lower block limit than mainnet
-      confirmations: 2, // # of confs to wait between deployments. (default: 0)
+      gas: 18000000, // Rinkeby has a lower block limit than mainnet
+      //confirmations: 2, // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
     },
