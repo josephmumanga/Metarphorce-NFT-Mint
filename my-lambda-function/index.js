@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
     // Execute the commands on the EC2 instance using Systems Manager Run Command
     await ssm.sendCommand({
       DocumentName: 'AWS-RunShellScript',
-      InstanceIds: ['i-1234567890'], // Replace with your EC2 instance ID
+      InstanceIds: ['i-0313b6faa5395b5d8'], // Replace with your EC2 instance ID
       Parameters: {
         commands: [
           'nvm use --lts',
