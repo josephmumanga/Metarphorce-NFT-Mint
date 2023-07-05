@@ -10,6 +10,7 @@ exports.handler = async (event, context) => {
       InstanceIds: ['i-0313b6faa5395b5d8'], // Replace with your EC2 instance ID
       Parameters: {
         commands: [
+          'cd Metarphorce-NFT-Mint',
           'nvm use --lts',
           'truffle migrate --reset --network mumbai',
           'truffle exec scripts/mintNFT.js --network mumbai'
